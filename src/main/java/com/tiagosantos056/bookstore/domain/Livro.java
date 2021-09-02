@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 
 @Entity
@@ -22,14 +24,12 @@ public class Livro implements Serializable{
 	private String titulo;
 	private String nome_autor;
 	private String texto;
-	
-	@ManyToMany
+	@ManyToOne
 	@JoinColumn(name = "categoria_id")
 	private Categoria categoria;
 
 	public Livro() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Livro(Integer id, String titulo, String nome_autor, String texto, Categoria categoria) {
