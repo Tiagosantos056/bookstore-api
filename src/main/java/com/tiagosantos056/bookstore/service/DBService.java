@@ -31,12 +31,12 @@ public class DBService {
 		Livro l2 = new Livro(null, "Do mil ao Milhão sem cortar o cafézinho", "Thiago Nigro", "Livro sobre investimentos e Negócios.", cat2);
 		Livro l3 = new Livro(null, "PLD", "Pablo Marçal", "Programa Liberdade Digital.", cat3);
 		Livro l4 = new Livro(null, "Sonho Grande", "Jorge Paulo Lemman", "O sonho de construir a maior cervejaria do mundo", cat4);
-		Livro l5 = new Livro(null, "Mais esperto que o diabo", "Napoleon Hill", "O segredo revelado do sucesso", cat1);
+		Livro l5 = new Livro(null, "Mais esperto que o diabo", "Napoleon Hill", "O segredo revelado do sucesso", cat5);
 		
 		cat1.getLivros().addAll(Arrays.asList(l1));
 		cat2.getLivros().addAll(Arrays.asList(l2));
 		
-		this.categoriaRepository.saveAll(Arrays.asList(cat1, cat2, cat3));
+		this.categoriaRepository.saveAll(Arrays.asList(cat1, cat2, cat3, cat4, cat5));
 		this.livroRepository.saveAll(Arrays.asList(l1, l2, l3, l4, l5));
 	}
 	
